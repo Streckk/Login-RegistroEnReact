@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Iniciar from './components/Iniciar';
 import Registrarse from './components/Registrarse';
 function App() {
@@ -18,8 +18,14 @@ function App() {
 
   return (
     <>
-      <h1>Bienvenido!!</h1>
-      {renderPage()}
+
+      <div className="flex items-center justify-center h-screen bg-[url('https://1.bp.blogspot.com/-m-VEdwkykS0/X2jHP6xwqMI/AAAAAAAAbLE/azc4CVreqNQPMs4nend97i6fo0_oPTgnQCLcBGAsYHQ/w1600/at-at-minimalist-pc-wallpaper-hd.png')] bg-cover bg-center">
+        <div className="w-3/4 p-4 text-white bg-black border-2 border-white border-solid bg-opacity-30 rounded-xl h-3/5">
+          <h1 className="m-2 text-3xl text-center">Iniciar Sesión</h1>
+          {renderPage()}
+        </div>
+      </div>
+
     </>
   )
 }

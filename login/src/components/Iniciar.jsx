@@ -1,6 +1,5 @@
-import React from 'react';
+
 import { useState, useEffect } from 'react';
-import Registrarse from './Registrarse';
 import axios from 'axios';
 
 
@@ -44,26 +43,29 @@ const Iniciar = ({ setPage }) => {
             alert('Nombre de usuario o contraseña incorrectos');
         }
     };
+
     return (
         <>
             {error && <p>Error: {error}</p>}
             <form onSubmit={handleSubmit}>
-                <label>Usuario:</label>
                 <input
                     type="text"
                     name="usuario"
                     value={usuario}
+                    placeholder='Username'
                     onChange={handleChange}
+                    className='m-3 bg-black bg-opacity-0 border-b-2 border-white h-7 focus:outline-none '
                 />
-                <label>Contraseña</label>
                 <input
                     type="password"
                     name="contrasena"
                     value={contrasena}
+                    placeholder='Password'
                     onChange={handleChange}
-                    className="text-3xl font-bold underline"
+                    className='m-3 bg-black bg-opacity-0 border-b-2 border-white h-7 focus:outline-none'
                 />
-                <button type="submit">Submit</button>
+                <button type="submit" className='w-4/5 text-lg text-black bg-white rounded-md'>Login</button>
+
             </form>
             <a href='#' onClick={() => setPage('registrarse')}>Registrarse</a>
         </>
