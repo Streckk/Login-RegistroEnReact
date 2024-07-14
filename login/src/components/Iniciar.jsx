@@ -61,6 +61,7 @@ const Iniciar = ({ setPage }) => {
                     name="contrasena"
                     value={contrasena}
                     onChange={handleChange}
+                    className="text-3xl font-bold underline"
                 />
                 <button type="submit">Submit</button>
             </form>
