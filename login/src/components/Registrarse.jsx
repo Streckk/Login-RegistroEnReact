@@ -18,7 +18,7 @@ const Registrarse = ({ setPage }) => {
 
     const PosteoInformacion = async (data) => {
         try {
-            const result = await axios.post('http://localhost/BackendPHP/Peticiones.php', data, {
+            const result = await axios.post('http://localhost/APIRESTful/Peticiones.php', data, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
