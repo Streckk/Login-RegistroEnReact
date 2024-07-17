@@ -56,14 +56,18 @@ const Registrarse = ({ setPage }) => {
   };
   //console.log(Formulario);
   return (
-    <div className="flex flex-col">
-      <form onSubmit={handleSubmit}>
+    
+    <div className="flex flex-col gap-8">
+        <a href="#" onClick={() => setPage("iniciar")}>Regresar</a>
+
+        <h1 className="font-semibold text-xl m-4 text-center">Crea una cuenta ahora!</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col items-center  gap-8">
         <input
           type="text"
           name="nombre"
           value={nombre}
           onChange={handleChange}
-          className="stylebutton"
+          className="styleInputs "
           placeholder="Nombre"
         />
         <input
@@ -71,7 +75,7 @@ const Registrarse = ({ setPage }) => {
           name="apellidos"
           value={apellidos}
           onChange={handleChange}
-          className="stylebutton"
+          className="styleInputs "
           placeholder="Apellidos"
         />
 
@@ -80,7 +84,7 @@ const Registrarse = ({ setPage }) => {
         name="edad" 
         value={edad} 
         onChange={handleChange} 
-        className="stylebutton"
+        className="styleInputs "
         placeholder="Edad"
         />
 
@@ -89,7 +93,7 @@ const Registrarse = ({ setPage }) => {
           name="correo"
           value={correo}
           onChange={handleChange}
-          className="stylebutton"
+          className="styleInputs "
           placeholder="Correo"
         />
 
@@ -98,7 +102,7 @@ const Registrarse = ({ setPage }) => {
           name="usuario"
           value={usuario}
           onChange={handleChange}
-          className="stylebutton"
+          className="styleInputs "
           placeholder="Username"
         />
         <input
@@ -106,15 +110,13 @@ const Registrarse = ({ setPage }) => {
           name="contrasena"
           value={contrasena}
           onChange={handleChange}
-          className="stylebutton"
+          className="styleInputs "
           placeholder="Contraseña"
         />
-        <button type="submit">Registrarse</button>
+        <button type="submit" className="styleButton">Registrarse</button>
       </form>
       {Errores && <p>Error: {Errores}</p>}
-      <a href="#" onClick={() => setPage("iniciar")}>
-        Regresar
-      </a>
+      
     </div>
   );
 };

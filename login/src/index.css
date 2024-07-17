@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.stylebutton{
-    @apply m-3 bg-black bg-opacity-0 border-b-2 border-white h-7 focus:outline-none;
+.styleInputs{
+    @apply placeholder:text-xs border border-gray-500 rounded-md h-12 w-4/5 focus:outline-none;
+}
+
+.styleButton{
+    @apply w-4/5 h-14 text-lg text-white bg-black rounded-xl;
 }
 
 

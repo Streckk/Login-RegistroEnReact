@@ -79,7 +79,7 @@ const Iniciar = ({ setPage }) => {
               value={usuario}
               placeholder="Escribe tu username..."
               onChange={handleChange}
-              className="placeholder:text-xs border border-gray-500 rounded-md h-12 w-4/5 focus:outline-none sm:w-3/4 md:w-2/4"
+              className="styleInputs sm:w-3/4 md:w-2/4"
             />
           </div>
 
@@ -93,7 +93,7 @@ const Iniciar = ({ setPage }) => {
               value={contrasena}
               placeholder="Escribre tu contraseña..."
               onChange={handleChange}
-              className="placeholder:text-xs border border-gray-500  rounded-md h-12 w-4/5 focus:outline-none  sm:w-3/4 md:w-2/4"
+              className="styleInputs sm:w-3/4 md:w-2/4"
             />
           </div>
 
