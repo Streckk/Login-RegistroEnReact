@@ -46,42 +46,77 @@ const Iniciar = ({ setPage }) => {
   return (
     <>
       {error && <p>Error: {error}</p>}
-        <div className="flex flex-col items-center justify-center max-h-80">
-        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center w-full lg:w-1/2">
-        <input
-          type="text"
-          name="usuario"
-          value={usuario}
-          placeholder="Username"
-          onChange={handleChange}
-          className="m-3 bg-black bg-opacity-0 border-b-2 border-white h-7 focus:outline-none  sm:w-3/4 md:w-2/4 "
+
+      <div className="flex justify-center items-center">
+        <img
+          src="src/assets/moving-forward-96.svg"
+          alt="Moving Forward"
+          className="w-3/6 h-64"
         />
-        <input
-          type="password"
-          name="contrasena"
-          value={contrasena}
-          placeholder="Password"
-          onChange={handleChange}
-          className="m-3 bg-black bg-opacity-0 border-b-2 border-white h-7 focus:outline-none sm:w-3/4 md:w-2/4"
-        />
-        <div className="w-full flex justify-center">
-          <button
-            type="submit"
-            className="w-4/5 text-lg text-black bg-white rounded-md sm:w-2/4 md:w-2/4"
-          >
-            Login
-          </button>
+      </div>
+
+      <div className="flex flex-col justify-center h-max">
+
+
+        <div className="self-center h-36 w-3/4 mb-8">
+          <h1 className="font-semibold text-xl m-4">Vamos a iniciar sesión.</h1>
+          <p className="text-gray-400 text-lg m-4">
+            ¡Bienvenido de nuevo, te hemos extrañado!
+          </p>
         </div>
-      </form>
-        </div>
-        <div className="flex items-center justify-center">
-      <a
-        href="#"
-        onClick={() => setPage("registrarse")}
-        className="w-4/5 m-4 bg-white text-black rounded-md text-lg text-center sm:w-2/4"
-      >
-        Registrarse
-      </a>
+
+        <form onSubmit={handleSubmit} className="flex flex-col w-full lg:w-1/2">
+          <div className="flex flex-col items-start ml-8 mb-4">
+            <label
+              htmlFor="text"
+              className="text-black font-semibold text-xs mb-0"
+            >
+              Username
+            </label>
+            <input
+              type="text"
+              name="usuario"
+              value={usuario}
+              placeholder="Escribe tu username..."
+              onChange={handleChange}
+              className="placeholder:text-xs border border-gray-500 rounded-md h-12 w-4/5 focus:outline-none sm:w-3/4 md:w-2/4"
+            />
+          </div>
+
+          <div className="flex flex-col items-start ml-8">
+            <label htmlFor="text" className="text-black font-semibold text-xs">
+              Password
+            </label>
+            <input
+              type="password"
+              name="contrasena"
+              value={contrasena}
+              placeholder="Escribre tu contraseña..."
+              onChange={handleChange}
+              className="placeholder:text-xs border border-gray-500  rounded-md h-12 w-4/5 focus:outline-none  sm:w-3/4 md:w-2/4"
+            />
+          </div>
+
+          <div className="flex flex-row self-center ml-8 mr-16 mt-16">
+            <p className="text-xs">Aún no tienes una cuenta?</p>
+            <a
+              href="#"
+              onClick={() => setPage("registrarse")}
+              className="bg-white text-black text-xs font-bold ml-2"
+            >
+              Registrarse
+            </a>
+          </div>
+
+          <div className="flex flex-col items-start  ml-8 mt-2">
+            <button
+              type="submit"
+              className=" w-4/5 h-14 text-lg text-white bg-black rounded-xl"
+            >
+              Login
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );
