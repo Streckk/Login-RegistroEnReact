@@ -46,7 +46,7 @@ const Iniciar = ({ setPage }) => {
   return (
     <>
       {error && <p>Error: {error}</p>}
-
+      <a href=""  onClick={() => setPage("Home")}>Regresar</a>
       <div className="flex justify-center items-center">
         <img
           src="src/assets/moving-forward-96.svg"
