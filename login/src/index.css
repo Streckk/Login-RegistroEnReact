@@ -10,4 +10,8 @@
     @apply w-4/5 h-14 text-lg text-white bg-black rounded-xl;
 }
 
+.textresolution {
+    @apply block mb-8 text-4xl text-center font-semibold
+}
+
 

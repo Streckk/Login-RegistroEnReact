@@ -58,7 +58,9 @@ const Registrarse = ({ setPage }) => {
   return (
     
     <div className="flex flex-col gap-8">
-        <a href="#" onClick={() => setPage("iniciar")}>Regresar</a>
+        <a href="#" onClick={() => { setPage('Iniciar') }}>
+        <img src="src/assets/flecha.png" alt="" className="w-6 absolute top-4 left-4"/>
+      </a>
 
         <h1 className="font-semibold text-xl m-4 text-center">Crea una cuenta ahora!</h1>
       <form onSubmit={handleSubmit} className="flex flex-col items-center  gap-8">
@@ -67,7 +69,7 @@ const Registrarse = ({ setPage }) => {
           name="nombre"
           value={nombre}
           onChange={handleChange}
-          className="styleInputs "
+          className="styleInputs sm:w-1/2 md:w-1/2"
           placeholder="Nombre"
         />
         <input
@@ -75,7 +77,7 @@ const Registrarse = ({ setPage }) => {
           name="apellidos"
           value={apellidos}
           onChange={handleChange}
-          className="styleInputs "
+          className="styleInputs sm:w-1/2 md:w-1/2"
           placeholder="Apellidos"
         />
 
@@ -84,7 +86,7 @@ const Registrarse = ({ setPage }) => {
         name="edad" 
         value={edad} 
         onChange={handleChange} 
-        className="styleInputs "
+        className="styleInputs sm:w-1/2 md:w-1/2"
         placeholder="Edad"
         />
 
@@ -93,7 +95,7 @@ const Registrarse = ({ setPage }) => {
           name="correo"
           value={correo}
           onChange={handleChange}
-          className="styleInputs "
+          className="styleInputs sm:w-1/2 md:w-1/2"
           placeholder="Correo"
         />
 
@@ -102,7 +104,7 @@ const Registrarse = ({ setPage }) => {
           name="usuario"
           value={usuario}
           onChange={handleChange}
-          className="styleInputs "
+          className="styleInputs sm:w-1/2 md:w-1/2"
           placeholder="Username"
         />
         <input
@@ -110,10 +112,10 @@ const Registrarse = ({ setPage }) => {
           name="contrasena"
           value={contrasena}
           onChange={handleChange}
-          className="styleInputs "
+          className="styleInputs sm:w-1/2 md:w-1/2"
           placeholder="Contraseña"
         />
-        <button type="submit" className="styleButton">Registrarse</button>
+        <button type="submit" className="styleButton sm:w-1/2 md:w-1/2">Registrarse</button>
       </form>
       {Errores && <p>Error: {Errores}</p>}
       

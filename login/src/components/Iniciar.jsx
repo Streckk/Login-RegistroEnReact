@@ -46,58 +46,65 @@ const Iniciar = ({ setPage }) => {
   return (
     <>
       {error && <p>Error: {error}</p>}
-      <a href=""  onClick={() => setPage("Home")}>Regresar</a>
-      <div className="flex justify-center items-center">
-        <img
-          src="src/assets/moving-forward-96.svg"
-          alt="Moving Forward"
-          className="w-3/6 h-64"
-        />
-      </div>
-
-      <div className="flex flex-col justify-center h-max">
+      
+      <a href="#" onClick={() => { setPage('Home') }}>
+        <img src="src/assets/flecha.png" alt="" className="w-8 absolute top-8 left-4"/>
+      </a>
 
 
-        <div className="self-center h-36 w-3/4 mb-8">
+        <div className="text-center h-36 w-full absolute top-1/4 lg:w-1/2 lg:top-24">
           <h1 className="font-semibold text-xl m-4">Vamos a iniciar sesión.</h1>
           <p className="text-gray-400 text-lg m-4">
             ¡Bienvenido de nuevo, te hemos extrañado!
           </p>
+          <img
+        src="src/assets/inciar.svg"
+        alt="Moving Forward"
+        className="hidden lg:block lg:m-8"
+      />
+
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col w-full lg:w-1/2">
-          <div className="flex flex-col items-start ml-8 mb-4">
-            <label
-              htmlFor="text"
-              className="text-black font-semibold text-xs mb-0"
-            >
-              Username
-            </label>
-            <input
-              type="text"
-              name="usuario"
-              value={usuario}
-              placeholder="Escribe tu username..."
-              onChange={handleChange}
-              className="styleInputs sm:w-3/4 md:w-2/4"
-            />
+        <form onSubmit={handleSubmit} className="w-full">
+          
+          <div className="absolute top-1/2 w-full lg:w-1/2 lg:top-1/4 lg:right-0 xl:top-1/3">
+            <h1 className="hidden textresolution">Iniciar Sesión</h1>
+            <div className="flex flex-col items-center mb-4">
+              <label
+                htmlFor="text"
+                className=" text-black font-semibold text-xs mb-0"
+              >
+                Username
+              </label>
+              <input
+                type="text"
+                name="usuario"
+                value={usuario}
+                placeholder="Escribe tu username..."
+                onChange={handleChange}
+                className="styleInputs sm:w-3/4 md:w-2/4 lg:w-3/4 xl:w-2/3"
+              />
+            </div>
+
+            <div className="flex flex-col items-center">
+              <label
+                htmlFor="text"
+                className="text-black font-semibold text-xs"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                name="contrasena"
+                value={contrasena}
+                placeholder="Escribre tu contraseña..."
+                onChange={handleChange}
+                className="styleInputs sm:w-3/4 md:w-2/4 lg:w-3/4 xl:w-2/3"
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col items-start ml-8">
-            <label htmlFor="text" className="text-black font-semibold text-xs">
-              Password
-            </label>
-            <input
-              type="password"
-              name="contrasena"
-              value={contrasena}
-              placeholder="Escribre tu contraseña..."
-              onChange={handleChange}
-              className="styleInputs sm:w-3/4 md:w-2/4"
-            />
-          </div>
-
-          <div className="flex flex-row self-center ml-8 mr-16 mt-16">
+          <div className="w-full flex flex-row justify-center absolute bottom-28  xl:bottom-40">
             <p className="text-xs">Aún no tienes una cuenta?</p>
             <a
               href="#"
@@ -108,16 +115,16 @@ const Iniciar = ({ setPage }) => {
             </a>
           </div>
 
-          <div className="flex flex-col items-start  ml-8 mt-2">
+          <div className="w-full flex justify-center absolute bottom-10  xl:bottom-16">
             <button
               type="submit"
-              className=" w-4/5 h-14 text-lg text-white bg-black rounded-xl"
+              className=" w-1/2 h-14 text-lg text-white bg-black rounded-xl lg:w-3/6 xl:w-1/3"
             >
               Login
             </button>
           </div>
         </form>
-      </div>
+      
     </>
   );
 };

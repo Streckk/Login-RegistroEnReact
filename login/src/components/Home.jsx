@@ -4,11 +4,11 @@ export const Home = ({ setPage }) => {
   return (
     <div className="relative h-screen flex flex-col">
     
-      <div className="max-w-full h-1/2 flex lg:w-1/2 lg:h-2/3">
+      <div className="max-w-full h-1/2 flex items-center lg:w-1/2 lg:h-2/3">
         <img
-          src="src/assets/mobile-testing-52.svg"
+          src="src/assets/Inicio.svg"
           alt="Moving Forward"
-          className="w-full h-96 object-contain lg:h-full"
+          className="w-full h-96 object-contain lg:h-4/5 "
         />
       </div>
 
@@ -24,11 +24,13 @@ export const Home = ({ setPage }) => {
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 mb-4 flex flex-col items-center lg:top-2/3">
-        <button className="bg-black text-white w-4/5 h-12 rounded-2xl mb-4 font-semibold sm:w-3/5 md:w-2/3 lg:w-1/3"
+        
+        <button className="bg-black text-white w-4/5 h-12 rounded-2xl mb-4 font-semibold sm:w-3/5 md:w-2/3 lg:w-1/4"
                 onClick={() => setPage("iniciar")}        >
           Login
         </button>
-        <button className="bg-gray-400 text-black w-4/5 h-12 rounded-2xl font-semibold sm:w-3/5 md:w-2/3 lg:w-1/3"
+
+        <button className="bg-gray-400 text-black w-4/5 h-12 rounded-2xl font-semibold sm:w-3/5 md:w-2/3 lg:w-1/4"
                 onClick={() => setPage("registrarse")}     >
           Register
         </button>
